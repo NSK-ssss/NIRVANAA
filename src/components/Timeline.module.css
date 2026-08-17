@@ -1,0 +1,145 @@
+.timelineSection {
+  background-color: var(--bg-base);
+  position: relative;
+  z-index: 5;
+}
+
+.titleContainer {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--color-orange);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.timelineContainer {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timelineCenterLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(56, 189, 248, 0.4) 20%,
+    rgba(255, 94, 40, 0.4) 80%,
+    transparent 100%
+  );
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 48px;
+  width: 50%;
+  display: flex;
+}
+
+.timelineItem.left {
+  left: 0;
+  padding-right: 48px;
+  justify-content: flex-end;
+}
+
+.timelineItem.right {
+  left: 50%;
+  padding-left: 48px;
+  justify-content: flex-start;
+}
+
+.timelineDot {
+  position: absolute;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-orange);
+  box-shadow: 0 0 14px var(--color-orange);
+  z-index: 2;
+}
+
+.timelineItem.left .timelineDot {
+  right: -6px;
+}
+
+.timelineItem.right .timelineDot {
+  left: -6px;
+}
+
+.timelineCard {
+  padding: 32px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.timelineYear {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-orange);
+  background: var(--color-orange-subtle);
+  border: 1px solid var(--border-orange);
+  padding: 4px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.timelineTitle {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.timelineDesc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .timelineCenterLine {
+    left: 20px;
+  }
+
+  .timelineItem {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 50px !important;
+    padding-right: 0 !important;
+    justify-content: flex-start !important;
+  }
+
+  .timelineItem .timelineDot {
+    left: 14px !important;
+    right: auto !important;
+  }
+
+  .timelineCard {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "team": [
+    {
+      "id": "team-1",
+      "name": "Parth Racka",
+      "role": "Founder & Backend Developer",
+      "avatar": "",
+      "bio": "Specializing in scalable backend architecture, robust database systems, API design, and cloud infrastructure to power high-growth digital applications.",
+      "skills": [
+        "Backend Architecture",
+        "Node.js & Python",
+        "Database Design",
+        "API Security",
+        "Cloud Deployment"
+      ],
+      "socials": {
+        "linkedin": "https://linkedin.com",
+        "twitter": "https://twitter.com",
+        "dribbble": ""
+      }
+    },
+    {
+      "id": "team-2",
+      "name": "Kushal Parakh",
+      "role": "Co-founder & Frontend Developer",
+      "avatar": "",
+      "bio": "Specializing in modern frontend engineering, kinetic web animations, responsive layout architecture, and high-converting user experiences.",
+      "skills": [
+        "Frontend Engineering",
+        "React & Next.js",
+        "TypeScript",
+        "UI/UX Design",
+        "Performance Optimization"
+      ],
+      "socials": {
+        "linkedin": "https://linkedin.com",
+        "twitter": "https://twitter.com",
+        "dribbble": ""
+      }
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "name": "Journey Rentals",
+      "category": "Travel & Car Rental",
+      "url": "journeyrentals.in",
+      "coverImage": "/images/projects/journey_rentals_cover.jpg",
+      "images": ["/images/projects/journey_rentals_1.jpg", "/images/projects/journey_rentals_2.jpg"],
+      "description": "A high-performance vehicle rental platform with automated booking workflows, instant quote calculation, and mobile-first interface.",
+      "scope": "UI/UX Design, Web Application Development, Booking Engine",
+      "tools": ["Next.js", "TypeScript", "Vanilla CSS", "Node.js"],
+      "duration": "1 Month",
+      "status": "completed",
+      "costing": 12000,
+      "revenue": 12000,
+      "reviews": [
+        {
+          "id": "rev-1-1",
+          "clientName": "Journey Rentals Team",
+          "rating": 5,
+          "reviewText": "Nirvanaa Studios delivered a seamless and reliable booking platform that helped us scale our online customer base instantly.",
+          "date": "2026-02-10"
+        }
+      ]
+    },
+    {
+      "id": "proj-2",
+      "name": "Modern Self Drive",
+      "category": "Self-Drive Vehicle Booking",
+      "url": "modernselfdrive.in",
+      "coverImage": "/images/projects/modern_self_drive_cover.jpg",
+      "images": ["/images/projects/modern_self_drive_1.jpg", "/images/projects/modern_self_drive_2.jpg"],
+      "description": "An interactive digital portal for self-drive car reservations featuring dynamic fleet exploration, booking calendars, and WhatsApp integration.",
+      "scope": "Brand Identity, Custom Web Development, SEO Architecture",
+      "tools": ["React", "Next.js", "TailwindCSS", "Express"],
+      "duration": "1.5 Months",
+      "status": "completed",
+      "costing": 18000,
+      "revenue": 18000,
+      "reviews": []
+    },
+    {
+      "id": "proj-3",
+      "name": "Swarajya Farm House & Resort",
+      "category": "Hospitality & Resort",
+      "url": "swarajyafarmhouseandresort.in",
+      "coverImage": "/images/projects/swarajya_resort_cover.jpg",
+      "images": ["/images/projects/swarajya_resort_1.jpg", "/images/projects/swarajya_resort_2.jpg"],
+      "description": "A visual showcase and direct booking system for a premier agro-tourism resort, featuring room tours, amenities catalog, and inquiry pipelines.",
+      "scope": "Visual Design, Mobile Responsive Layout, Contact Engine",
+      "tools": ["Next.js", "CSS Modules", "Framer Motion"],
+      "duration": "3 Weeks",
+      "status": "completed",
+      "costing": 8000,
+      "revenue": 8000,
+      "reviews": []
+    },
+    {
+      "id": "proj-4",
+      "name": "Aarambh Travels",
+      "category": "Travel & Tourism Agency",
+      "url": "aarambhatravels.in",
+      "coverImage": "/images/projects/aarambh_travels_cover.jpg",
+      "images": ["/images/projects/aarambh_travels_1.jpg", "/images/projects/aarambh_travels_2.jpg"],
+      "description": "A comprehensive tour package booking and inquiry website designed for domestic and international travel itineraries.",
+      "scope": "Full-Stack Web App, Itinerary Showcase, Lead Generation",
+      "tools": ["Next.js", "TypeScript", "Node.js", "MongoDB"],
+      "duration": "1.5 Months",
+      "status": "completed",
+      "costing": 22000,
+      "revenue": 22000,
+      "reviews": []
+    },
+    {
+      "id": "proj-5",
+      "name": "Drive Hub Goa",
+      "category": "Goa Car & Bike Rentals",
+      "url": "drivehubgoa.in",
+      "coverImage": "/images/projects/drive_hub_goa_cover.jpg",
+      "images": ["/images/projects/drive_hub_goa_1.jpg", "/images/projects/drive_hub_goa_2.jpg"],
+      "description": "An automated rental marketplace built for high tourist volumes in Goa, featuring live fleet availability, tariff calculators, and fast checkout.",
+      "scope": "Marketplace Architecture, Custom UI/UX, Payment Integration",
+      "tools": ["React", "Next.js", "PostgreSQL", "Cloud Engine"],
+      "duration": "2 Months",
+      "status": "completed",
+      "costing": 36000,
+      "revenue": 36000,
+      "reviews": []
+    },
+    {
+      "id": "proj-6",
+      "name": "GoaYatra",
+      "category": "Holiday & Tour Packages",
+      "url": "goayatra.co.in",
+      "coverImage": "/images/projects/goayatra_cover.jpg",
+      "images": ["/images/projects/goayatra_1.jpg", "/images/projects/goayatra_2.jpg"],
+      "description": "A streamlined travel guide and booking showcase tailored for travelers seeking verified experiences, water sports, and beach stays in Goa.",
+      "scope": "UI Design, Rapid Static Site Generation, SEO Optimization",
+      "tools": ["Next.js", "Vanilla CSS", "Vercel"],
+      "duration": "2 Weeks",
+      "status": "completed",
+      "costing": 6000,
+      "revenue": 6000,
+      "reviews": []
+    },
+    {
+      "id": "proj-7",
+      "name": "Divine Yoga Studio",
+      "category": "Wellness & Holistic Health",
+      "url": "divineyogastudio.in",
+      "coverImage": "/images/projects/divine_yoga_cover.jpg",
+      "images": ["/images/projects/divine_yoga_1.jpg", "/images/projects/divine_yoga_2.jpg"],
+      "description": "A serene, calming digital presence for a yoga and meditation studio with batch schedules, trainer profiles, and online trial registrations.",
+      "scope": "Aesthetic Web Experience, Membership Inquiries, Schedule Board",
+      "tools": ["Next.js", "Framer Motion", "CSS3"],
+      "duration": "3 Weeks",
+      "status": "completed",
+      "costing": 7000,
+      "revenue": 7000,
+      "reviews": []
+    },
+    {
+      "id": "proj-8",
+      "name": "Cab Castle",
+      "category": "Intercity Cab Booking",
+      "url": "cabcastle.in",
+      "coverImage": "/images/projects/cab_castle_cover.jpg",
+      "images": ["/images/projects/cab_castle_1.jpg", "/images/projects/cab_castle_2.jpg"],
+      "description": "A fast, user-friendly taxi booking and route estimation web application for one-way and round-trip outstation journeys.",
+      "scope": "Fare Calculator, Route Distance Estimation, Mobile Booking UX",
+      "tools": ["Next.js", "TypeScript", "Express API"],
+      "duration": "1 Month",
+      "status": "in_progress",
+      "costing": 20000,
+      "revenue": 20000,
+      "reviews": []
+    },
+    {
+      "id": "proj-9",
+      "name": "Second Homez",
+      "category": "Real Estate & Holiday Stays",
+      "url": "secondhomez.in",
+      "coverImage": "/images/projects/second_homez_cover.jpg",
+      "images": ["/images/projects/second_homez_1.jpg", "/images/projects/second_homez_2.jpg"],
+      "description": "A luxury property discovery catalog for second homes, weekend villas, and holiday investment real estate.",
+      "scope": "Property Listing Architecture, Lead Capture Forms, Filter System",
+      "tools": ["Next.js", "React", "Node.js", "TailwindCSS"],
+      "duration": "1.5 Months",
+      "status": "in_progress",
+      "costing": 21000,
+      "revenue": 21000,
+      "reviews": []
+    },
+    {
+      "id": "proj-10",
+      "name": "Car Castle",
+      "category": "Automotive & Fleet Rentals",
+      "url": "carcastel.in",
+      "coverImage": "/images/projects/car_castle_cover.jpg",
+      "images": ["/images/projects/car_castle_1.jpg", "/images/projects/car_castle_2.jpg"],
+      "description": "An intuitive car rental showcase enabling customers to browse luxury and economy fleet vehicles with straightforward pricing and quick booking.",
+      "scope": "Fleet Grid, Tariff Transparency, Direct Call & Chat Integration",
+      "tools": ["Next.js", "Vanilla CSS", "Responsive Engine"],
+      "duration": "1 Month",
+      "status": "completed",
+      "costing": 18000,
+      "revenue": 18000,
+      "reviews": []
+    }
+  ],
+  "settings": {
+    "yearsActive": 3,
+    "completedCount": 7,
+    "inProgressCount": 2,
+    "totalCount": 10
+  }
+}

@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Color Palette - Nirvanaa Dark Cinematic */
+  --bg-base: #0a0e14;
+  --bg-secondary: #0d121a;
+  --bg-card: rgba(13, 18, 26, 0.75);
+  --bg-card-hover: rgba(19, 26, 38, 0.85);
+
+  /* Blue Glow / Spotlight Accents */
+  --glow-blue-primary: rgba(30, 58, 138, 0.45);
+  --glow-blue-cyan: rgba(14, 165, 233, 0.25);
+  --glow-blue-soft: rgba(59, 130, 246, 0.15);
+
+  /* Warm Orange Accents */
+  --color-orange: #ff5e28;
+  --color-orange-hover: #ff7644;
+  --color-orange-glow: rgba(255, 94, 40, 0.35);
+  --color-orange-subtle: rgba(255, 94, 40, 0.12);
+
+  /* Typography Colors */
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.72);
+  --text-muted: rgba(255, 255, 255, 0.45);
+  --text-dim: rgba(255, 255, 255, 0.25);
+
+  /* Borders & Lines */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-light: rgba(255, 255, 255, 0.15);
+  --border-glow-blue: rgba(56, 189, 248, 0.3);
+  --border-orange: rgba(255, 94, 40, 0.4);
+
+  /* Typography Families */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-italic-accent: 'Instrument Serif', 'Times New Roman', serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base Body with Ambient Spotlight Background */
+body {
+  position: relative;
+  background-image: 
+    radial-gradient(circle at 85% 15%, var(--glow-blue-primary) 0%, rgba(10, 14, 20, 0) 50%),
+    radial-gradient(circle at 15% 75%, var(--glow-blue-cyan) 0%, rgba(10, 14, 20, 0) 45%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-orange);
+}
+
+/* Text Selection */
+::selection {
+  background: var(--color-orange);
+  color: #ffffff;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.italic-accent {
+  font-family: var(--font-italic-accent);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-orange);
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.65;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+}
+
+/* Reusable Spotlight Section Wrappers */
+.section-spotlight {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 24px;
+}
+
+.section-spotlight::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  right: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--glow-blue-primary) 0%, rgba(10, 14, 20, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-spotlight-left::before {
+  left: -150px;
+  right: auto;
+  background: radial-gradient(circle, var(--glow-blue-cyan) 0%, rgba(10, 14, 20, 0) 70%);
+}
+
+.section-spotlight-bottom::before {
+  top: auto;
+  bottom: -150px;
+  right: 15%;
+  background: radial-gradient(circle, var(--glow-blue-primary) 0%, rgba(10, 14, 20, 0) 70%);
+}
+
+/* Reusable Orange Solid Button */
+.btn-orange {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--color-orange);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 12px 26px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  box-shadow: 0 4px 20px var(--color-orange-glow);
+  transition: var(--transition-fast);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.btn-orange:hover {
+  background-color: var(--color-orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 94, 40, 0.5);
+}
+
+.btn-orange:active {
+  transform: translateY(0);
+}
+
+/* Reusable Dark Glass Card */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  transition: var(--transition-smooth);
+}
+
+.glass-card:hover {
+  border-color: var(--border-glow-blue);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(14, 165, 233, 0.1);
+}
+
+/* Background Particle Canvas Container */
+.background-canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}

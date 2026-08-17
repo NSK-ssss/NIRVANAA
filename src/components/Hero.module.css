@@ -1,0 +1,414 @@
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 130px 48px 48px;
+  background-color: var(--bg-base);
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Atmospheric Top-Right Blue Glow Spotlight */
+.spotlightGlow {
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 850px;
+  height: 850px;
+  background: radial-gradient(
+    circle,
+    rgba(30, 58, 138, 0.5) 0%,
+    rgba(14, 165, 233, 0.25) 35%,
+    rgba(10, 14, 20, 0) 70%
+  );
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(40px);
+}
+
+.spotlightSecondaryGlow {
+  position: absolute;
+  bottom: 10%;
+  left: -150px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(30, 58, 138, 0.2) 0%,
+    rgba(10, 14, 20, 0) 65%
+  );
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(50px);
+}
+
+/* SVG Filter hidden offscreen */
+.svgFilter {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+/* Center Content Container */
+.heroContainer {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 5;
+}
+
+/* Headline Layout */
+.headlineContainer {
+  position: relative;
+  z-index: 2;
+}
+
+.headlineWrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+}
+
+.headlineLine1 {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+}
+
+.headlineBold {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 11vw, 10.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: none;
+  letter-spacing: -0.035em;
+  display: inline-block;
+}
+
+.headlineItalicAccent {
+  font-family: var(--font-italic-accent);
+  font-size: clamp(2.8rem, 7.5vw, 7.2rem);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-orange);
+  letter-spacing: 0.01em;
+  display: inline-block;
+  transform: translateY(-4px);
+  text-shadow: 0 0 35px var(--color-orange-glow);
+}
+
+.headlineLine2 {
+  display: flex;
+  align-items: baseline;
+}
+
+/* Floating Magnifying Lens Glass Orb */
+.lensOrb {
+  position: absolute;
+  top: -105px;
+  left: -105px;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10;
+  overflow: hidden;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 
+    0 15px 45px rgba(0, 0, 0, 0.8),
+    0 0 35px rgba(14, 165, 233, 0.4),
+    inset 0 0 25px rgba(255, 255, 255, 0.25),
+    inset 0 0 50px rgba(56, 189, 248, 0.2);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  will-change: transform;
+  transition: opacity 0.3s ease;
+}
+
+/* Glass Specular Highlights */
+.lensGlassRim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 25%,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.05) 40%,
+    transparent 65%
+  );
+  z-index: 12;
+  pointer-events: none;
+}
+
+.lensGlassReflection {
+  position: absolute;
+  top: 8%;
+  left: 15%;
+  width: 70%;
+  height: 35%;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, transparent 100%);
+  transform: rotate(-25deg);
+  filter: blur(2px);
+  z-index: 13;
+  pointer-events: none;
+}
+
+.lensHologramGrid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(56, 189, 248, 0.04) 0px,
+    rgba(56, 189, 248, 0.04) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  z-index: 11;
+  pointer-events: none;
+}
+
+/* Magnified Content inside Lens */
+.lensContentLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1400px;
+  pointer-events: none;
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+.lensHeadlineWrapper {
+  white-space: nowrap;
+}
+
+/* Chromatic Aberration Layers */
+.lensAberrationBase {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  z-index: 3;
+}
+
+.lensAberrationCyan {
+  position: absolute;
+  top: 0;
+  left: -4px;
+  color: #00f0ff;
+  opacity: 0.85;
+  filter: blur(0.5px);
+  mix-blend-mode: screen;
+  z-index: 2;
+}
+
+.lensAberrationCyan .headlineItalicAccent {
+  color: #00f0ff;
+  text-shadow: 0 0 25px #00f0ff;
+}
+
+.lensAberrationRed {
+  position: absolute;
+  top: 0;
+  left: 4px;
+  color: #ff0055;
+  opacity: 0.85;
+  filter: blur(0.5px);
+  mix-blend-mode: screen;
+  z-index: 1;
+}
+
+.lensAberrationRed .headlineItalicAccent {
+  color: #ff0055;
+  text-shadow: 0 0 25px #ff0055;
+}
+
+/* Bottom Meta & Action Area */
+.heroBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 40px;
+  z-index: 5;
+  gap: 32px;
+}
+
+/* Bottom-Left Meta Info Blocks */
+.metaInfoRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+}
+
+.metaBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metaKey {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.metaVal {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.headlineTopBadge {
+  margin-bottom: 16px;
+}
+
+.subtextStudio {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--color-orange);
+  text-transform: uppercase;
+}
+
+/* Bottom-Right Explore Element */
+.bottomRightArea {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.exploreBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  transition: var(--transition-fast);
+}
+
+.arrowCircle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: var(--transition-bounce);
+}
+
+.exploreBtn:hover .arrowCircle {
+  background: var(--color-orange);
+  border-color: var(--color-orange);
+  box-shadow: 0 0 20px var(--color-orange-glow);
+  transform: translateY(3px);
+}
+
+.exploreText {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.exploreBtn:hover .exploreText {
+  color: var(--color-orange);
+}
+
+.progressTrack {
+  width: 70px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.15);
+  position: relative;
+  cursor: pointer;
+}
+
+.progressBar {
+  width: 45%;
+  height: 100%;
+  background: var(--color-orange);
+  box-shadow: 0 0 8px var(--color-orange);
+}
+
+.verticalDivider {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 1024px) {
+  .heroSection {
+    padding: 110px 32px 36px;
+  }
+
+  .metaInfoRow {
+    gap: 20px;
+  }
+
+  .lensOrb {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 100px 20px 30px;
+    min-height: auto;
+  }
+
+  .heroBottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    padding-top: 32px;
+  }
+
+  .metaInfoRow {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .bottomRightArea {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .lensOrb {
+    display: none; /* Gracefully disable lens on small touch screens for performance */
+  }
+}
