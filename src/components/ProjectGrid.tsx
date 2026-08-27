@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, ExternalLink, IndianRupee, Globe } from 'lucide-react';
+import { ArrowUpRight, ExternalLink, Globe } from 'lucide-react';
 import { Project } from '@/lib/db';
 import styles from './ProjectGrid.module.css';
 
@@ -23,14 +23,6 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         ease: [0.16, 1, 0.3, 1] as any,
       },
     },
-  };
-
-  const formatINR = (val: number) => {
-    return new Intl.NumberFormat('en-IN', {
-      style: 'currency',
-      currency: 'INR',
-      maximumFractionDigits: 0,
-    }).format(val || 0);
   };
 
   return (
@@ -87,15 +79,8 @@ function ProjectCard({ project, index }: ProjectCardProps) {
 
           <p className={styles.desc}>{project.description}</p>
 
-          {/* Financials & URL Footer */}
+          {/* Action Footer */}
           <div className={styles.statsRow}>
-            <div className={styles.statBox}>
-              <span className={styles.statLabel}>
-                <IndianRupee size={12} className={styles.iconOrange} /> Project Investment
-              </span>
-              <span className={styles.statCost}>{formatINR(project.costing)}</span>
-            </div>
-
             <div className={styles.statActions}>
               <Link href={`/projects/${project.id}`} className={styles.detailLink}>
                 View Case Study <ArrowUpRight size={14} />

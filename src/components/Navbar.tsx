@@ -33,7 +33,6 @@ export default function Navbar() {
     { label: 'ABOUT', href: isHome ? '#about' : '/#about' },
     { label: 'WORK', href: isHome ? '#projects' : '/#projects' },
     { label: 'IMPACT', href: isHome ? '#impact' : '/#impact' },
-    { label: 'FOUNDERS', href: isHome ? '#founders' : '/#founders' },
     { label: 'CONTACT', href: isHome ? '#contact' : '/#contact' },
   ];
 

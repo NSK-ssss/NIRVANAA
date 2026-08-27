@@ -202,8 +202,8 @@
 
 .statsRow {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: flex-end;
+  align-items: center;
   padding-top: 16px;
   border-top: 1px solid var(--border-subtle);
   gap: 16px;

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { ArrowLeft, Star, Clock, Briefcase, Award, TrendingUp, DollarSign } from 'lucide-react';
+import { ArrowLeft, Star, Clock, Briefcase, Award, TrendingUp } from 'lucide-react';
 import { Project } from '@/lib/db';
 import styles from './projectDetail.module.css';
 
@@ -125,16 +125,6 @@ export default function ProjectDetailContent({ project }: ProjectDetailContentPr
 
         {/* Financial Metrics Cards */}
         <div className={styles.financialsGrid}>
-          <div className={`${styles.financialCard} glass-card`}>
-            <div className={styles.statIconCircle}>
-              <DollarSign size={20} color="#38bdf8" />
-            </div>
-            <div>
-              <span className={styles.financialLabel}>PROJECT INVESTMENT</span>
-              <span className={styles.financialCost}>{formatCurrency(project.costing)}</span>
-            </div>
-          </div>
-
           <div className={`${styles.financialCard} glass-card`}>
             <div className={styles.statIconCircle} style={{ background: 'var(--color-orange-subtle)' }}>
               <TrendingUp size={20} color="#ff5e28" />
